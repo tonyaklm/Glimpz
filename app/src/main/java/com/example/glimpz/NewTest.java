@@ -42,6 +42,7 @@ public class NewTest extends AppCompatActivity {
             finishbutton.setVisibility(View.GONE);
         }
         finishbutton.setOnClickListener(view -> {
+            addQuestion();
             YourTests.tests.add(test);
             test = new Test(bookTitle);
             Intent startActivity = new Intent(this, YourTests.class);
