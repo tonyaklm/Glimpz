@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+// HELLO
+
 class TestResult extends AppCompatActivity {
 
     private static final String ARG_CORRECT_ANSWERS = "Arg.CorrectAnswers";
