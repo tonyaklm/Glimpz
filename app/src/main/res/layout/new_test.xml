@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/questionInput1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите вопрос"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/questionPrint1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите правильный ответ "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/questionInput1"
+         />
+
+    <EditText
+        android:id="@+id/questionPrint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите ответ 2"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/questionPrint1"/>
+
+    <EditText
+        android:id="@+id/questionPrint3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите ответ3"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/questionPrint2"/>
+
+    <EditText
+        android:id="@+id/questionPrint4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:hint="Введите ответ4"
+        app:layout_constraintTop_toBottomOf="@id/questionPrint3"/>
+
+    <Button
+        android:id="@+id/newpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="50px"
+        android:text="Перейти к следующему вопросу"
+        android:textSize="45px"
+        app:layout_constraintTop_toBottomOf="@id/questionPrint4"
+         />
+    <Button
+        android:id="@+id/finishbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="50px"
+        android:text="Завершить составление теста"
+        android:textSize="45px"
+        app:layout_constraintTop_toBottomOf="@id/newpage"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

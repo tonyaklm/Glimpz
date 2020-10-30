@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/classic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/poem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="230dp"
+        android:layout_height="75dp"
+        android:textStyle="bold|italic"
+        android:textSize="45px"
+        android:padding="50px"
+        android:text="Классические произведения"
+
+        />
+
+    <Button
+        android:id="@+id/poem"
+        android:layout_width="230dp"
+        android:layout_height="75dp"
+        android:padding="50px"
+        android:text="Поэмы"
+        android:textSize="45px"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/adventure"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classic"
+
+        />
+
+    <Button
+        android:id="@+id/adventure"
+        android:layout_width="230dp"
+        android:layout_height="75dp"
+        android:padding="50px"
+        android:text="Приключения"
+        android:textSize="45px"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/poem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

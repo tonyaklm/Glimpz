@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/loginInput1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите логин"
+        app:layout_constraintBottom_toTopOf="@id/passwordInput1"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/passwordInput1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите пароль (6-20 символов)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/emailInput1"
+        app:layout_constraintTop_toBottomOf="@id/loginInput1"
+        />
+    <EditText
+        android:id="@+id/emailInput1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите адрес элктронной почты"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/register"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput1"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Зарегистрироваться"
+        app:layout_constraintTop_toBottomOf="@id/emailInput1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

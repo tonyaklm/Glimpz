@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/balda_now"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/balda2"
+            android:padding="50px"
+            android:text="Сказка о попе и о работнике его Балде (А.С.Пушкин)"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.078" />
+
+        <TextView
+            android:id="@+id/text_balda"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:textStyle="bold|italic"
+            app:layout_constraintTop_toBottomOf="@id/balda_now"
+            android:text=" Сказка о скупом попе и находчивом работнике Балде. Нанялся как-то Балда на службу за три щелчка по лбу попу. Когда близилось время расплаты, поп решил дать Балде невыполнимое задание, чтобы избавиться от него. Но Балда справился со всем, обхитрил самих чертей и наказал попа…"/>
+
+        <Button
+            android:id="@+id/newtest"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+
+            android:padding="50px"
+            android:text="Составить свой тест"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_balda" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
