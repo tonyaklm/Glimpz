@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.glimpz.data.TestStore;
 import com.example.glimpz.data.Users;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Users.init(this);
+        TestStore.init(this);
         setContentView(R.layout.activity_login);
 
         TextView loginView = findViewById(R.id.login);
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.enter).setOnClickListener((view) -> {
             String login = loginView.getText().toString();
             String password = passwordView.getText().toString();
-            if (Users.check(login, password)) {
+            if (Users.login(login, password)) {
                 Intent intent = new Intent(this, DashboardActivity.class);
                 startActivity(intent);
             }

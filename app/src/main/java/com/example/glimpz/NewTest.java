@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.example.glimpz.data.Question;
 import com.example.glimpz.data.Test;
+import com.example.glimpz.data.TestStore;
 import com.example.glimpz.screen.yourtests.YourTests;
 
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ public class NewTest extends AppCompatActivity {
         }
         finishbutton.setOnClickListener(view -> {
             addQuestion();
-            YourTests.tests.add(test);
+            TestStore.addTest(test);
             test = new Test(bookTitle);
             Intent startActivity = new Intent(this, YourTests.class);
             startActivity(startActivity);

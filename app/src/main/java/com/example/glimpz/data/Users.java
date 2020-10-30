@@ -7,6 +7,8 @@ public class Users {
 
     static SharedPreferences prefs;
 
+    private static String currentUserLogin;
+
     public static void init(Context context) {
         prefs = context.getSharedPreferences("users", Context.MODE_PRIVATE);
     }
@@ -17,8 +19,12 @@ public class Users {
                 .apply();
     }
 
-    public static boolean check(String login, String password) {
+    public static boolean login(String login, String password) {
         String expectedPassword = prefs.getString(login, "");
         return expectedPassword.equals(password);
+    }
+
+    public static String getCurrentUserLogin() {
+        return currentUserLogin;
     }
 }
