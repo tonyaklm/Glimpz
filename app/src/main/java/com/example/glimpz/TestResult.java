@@ -3,15 +3,12 @@ package com.example.glimpz;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-// HELLO
-
-class TestResult extends AppCompatActivity {
+public class TestResult extends AppCompatActivity {
 
     private static final String ARG_CORRECT_ANSWERS = "Arg.CorrectAnswers";
     private static final String ARG_TOTAL_QUESTIONS = "Arg.TotalQuestions";
