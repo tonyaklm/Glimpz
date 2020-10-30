@@ -2,6 +2,7 @@ package com.example.glimpz.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Base64;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,7 +10,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Base64;
 
 public class TestStore {
 
@@ -39,7 +39,7 @@ public class TestStore {
 
     private static ArrayList<Test> fromString(String text) {
         try {
-            byte[] data = Base64.getDecoder().decode(text);
+            byte[] data = Base64.decode(text, Base64.DEFAULT);
             return (ArrayList<Test>) (new ObjectInputStream(new ByteArrayInputStream(data))).readObject();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -54,7 +54,7 @@ public class TestStore {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         try {
             (new ObjectOutputStream(stream)).writeObject(tests);
-            return Base64.getEncoder().encodeToString(stream.toByteArray());
+            return Base64.encodeToString(stream.toByteArray(), Base64.DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
             return null;
