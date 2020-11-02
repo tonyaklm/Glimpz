@@ -18,27 +18,56 @@ public class Library extends AppCompatActivity {
 
     public static final String ARG_BOOK = "Arg.Book";
 
+    private final Handler handler = new Handler();
     private String strCur = "";
-    private TextView ball;
+    private TextView bookText;
+    private TextView timeLeft;
+    private int currentPageReadingTime = 0;
+    private int currentPage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ball_book);
-        ball = findViewById(R.id.ball);
+        setContentView(R.layout.acitivity_library);
+        bookText = findViewById(R.id.bookText);
+        timeLeft = findViewById(R.id.timeLeft);
         try {
             strCur = readBook();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        new Handler().postDelayed(() -> ball.setText(nextPageball()), 50);
+        handler.postDelayed(() -> recalculatePageReadingTime(false), 50);
 
         Button nextball = findViewById(R.id.nextball);
-        nextball.setOnClickListener(view -> ball.setText(nextPageball()));
+        nextball.setOnClickListener(view -> recalculatePageReadingTime(true));
     }
 
+    private void recalculatePageReadingTime(boolean forceNextPage) {
+        if (currentPageReadingTime == 0 || forceNextPage) {
+            renderNextPage();
+        } else {
+            updateTimer();
+        }
+        handler.postDelayed(() -> recalculatePageReadingTime(false), 1000);
+    }
 
+    private int getCurrentPageReadingTime() {
+        return Math.max(5, 12 - currentPage / 10);
+    }
+
+    private void renderNextPage() {
+        currentPageReadingTime = getCurrentPageReadingTime();
+        handler.removeCallbacksAndMessages(null);
+        bookText.setText(getNextPage());
+        ++currentPage;
+        updateTimer();
+    }
+
+    private void updateTimer() {
+        timeLeft.setText("Осталось " + currentPageReadingTime + " секунд");
+        currentPageReadingTime -= 1;
+    }
 
     private String readBook() throws IOException {
         InputStream inputStream = getResources().openRawResource(getTextFileId());
@@ -53,13 +82,15 @@ public class Library extends AppCompatActivity {
         }
         return text;
     }
-    String nextPageball() {
+
+
+    String getNextPage() {
         String page = "";
         int i = 0;
         while (i < 25) {
             TextPaint textPaint = new TextPaint();
-            textPaint.setTextSize(ball.getTextSize());
-            int pageSize = textPaint.breakText(strCur, true, ball.getWidth(), null);
+            textPaint.setTextSize(bookText.getTextSize());
+            int pageSize = textPaint.breakText(strCur, true, bookText.getWidth(), null);
             String line = strCur.substring(0, pageSize);
             page += line;
             strCur = strCur.substring(pageSize);
