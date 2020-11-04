@@ -12,7 +12,7 @@ public class ListBookBeginer extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_book_beginer);
 
-        Button next = (Button) findViewById(R.id.next);
+        Button next = findViewById(R.id.next);
         next.setOnClickListener(view -> {
             Intent startActivity = new Intent(this, JunrBeginer.class);
             startActivity(startActivity);

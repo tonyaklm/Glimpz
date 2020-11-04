@@ -12,16 +12,12 @@ public class KnarOkno extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.knar_okno);
 
-        Button knar_now = (Button) findViewById(R.id.knar_now);
-        knar_now.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, Library.class);
-            startActivity.putExtra(Library.ARG_BOOK, Book.Knar);
-            startActivity(startActivity);
-        });
-        Button newtest = (Button) findViewById(R.id.newtest);
+        Button knar_now = findViewById(R.id.knar_now);
+        knar_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Knar));
+        Button newtest = findViewById(R.id.newtest);
         newtest.setOnClickListener(view -> Rules.start(this, knar_now.getText().toString()));
 
-        Button menu = (Button) findViewById(R.id.menu);
+        Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {
             Intent startActivity = new Intent(this, DashboardActivity.class);
             startActivity(startActivity);

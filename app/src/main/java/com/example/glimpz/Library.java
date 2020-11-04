@@ -1,5 +1,7 @@
 package com.example.glimpz;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextPaint;
@@ -16,7 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Library extends AppCompatActivity {
 
-    public static final String ARG_BOOK = "Arg.Book";
+    private static final String ARG_SPEED_READING = "Arg.SpeedReading";
+    private static final String ARG_BOOK = "Arg.Book";
 
     private final Handler handler = new Handler();
     private String strCur = "";
@@ -115,5 +118,12 @@ public class Library extends AppCompatActivity {
 
         }
         throw new IllegalArgumentException("No book");
+    }
+
+    public static void launch(Context context, boolean speedReading, Book book) {
+        Intent intent = new Intent(context, Library.class);
+        intent.putExtra(ARG_SPEED_READING, speedReading);
+        intent.putExtra(ARG_BOOK,  book);
+        context.startActivity(intent);
     }
 }
