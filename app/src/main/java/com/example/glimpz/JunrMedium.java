@@ -12,19 +12,19 @@ public class JunrMedium extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.junr_medium);
 
-        Button fantasy = (Button) findViewById(R.id.adventure);
-        fantasy.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, AdventureChoice.class);
+        Button comedy = (Button) findViewById(R.id.comedy);
+        comedy.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, GoreOkno.class);
             startActivity(startActivity);
         });
         Button classic = (Button) findViewById(R.id.classic);
         classic.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, ClassicChoice.class);
+            Intent startActivity = new Intent(this, PlenKOkno.class);
             startActivity(startActivity);
         });
-        Button poem = (Button) findViewById(R.id.poem);
-        poem.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, PoemChoice.class);
+        Button poaziya = (Button) findViewById(R.id.poaziya);
+        poaziya.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, MozartOkno.class);
             startActivity(startActivity);
         });
     }

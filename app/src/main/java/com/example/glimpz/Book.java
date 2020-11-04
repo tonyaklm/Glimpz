@@ -8,5 +8,6 @@ public enum Book {
     Juk,
     Balda,
     Mozart,
-
+    Plenk,
+    Gore,
 }

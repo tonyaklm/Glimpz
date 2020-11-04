@@ -13,12 +13,12 @@
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/bal_now"
+            android:id="@+id/gore_now"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/after_ball"
+            android:drawableTop="@drawable/gore"
             android:padding="50px"
-            android:text="После Бала (Л. Н. Толстой)"
+            android:text="Горе от ума (А.С.Грибоедов)"
             android:textSize="45px"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -26,19 +26,18 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.085" />
+            app:layout_constraintVertical_bias="0.078" />
 
         <TextView
-            android:id="@+id/text_bal"
+            android:id="@+id/text_gore"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:textStyle="bold|italic"
-            app:layout_constraintTop_toBottomOf="@id/bal_now"
-            android:text="В произведении Льва Николаевича Толстого происходит спор о том, что определяет человеческую судьбу. Присутствующий Иван Васильевич, пользующийся всеобщим авторитетом, неожиданно утверждает, что всё определяет банальный случай и в подтверждение своих слов рассказывает историю, случившуюся с ним."
-             />
 
+            android:textStyle="bold|italic"
+            app:layout_constraintTop_toBottomOf="@id/gore_now"
+            android:text=":"/>
         <Button
             android:id="@+id/newtest"
             android:layout_width="230dp"
@@ -51,7 +50,7 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_bal" />
+            app:layout_constraintTop_toBottomOf="@+id/text_gore" />
         <Button
             android:id="@+id/menu"
             android:layout_width="150dp"
@@ -66,6 +65,7 @@
             app:layout_constraintHorizontal_bias="0.938"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

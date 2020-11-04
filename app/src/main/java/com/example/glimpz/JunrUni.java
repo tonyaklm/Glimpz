@@ -4,10 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.example.glimpz.AccActivity;
-import com.example.glimpz.R;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class JunrUni extends AppCompatActivity {
@@ -16,19 +12,19 @@ public class JunrUni extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.junr_uni);
 
-        Button romance = (Button) findViewById(R.id.romance);
-        romance.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, RomanceChoice.class);
+        Button adventure = (Button) findViewById(R.id.adventure);
+        adventure.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, KillmanOkno.class);
             startActivity(startActivity);
         });
-        Button delovaya = (Button) findViewById(R.id.delovaya);
-        delovaya.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, DelovayaChoice.class);
+        Button classic = (Button) findViewById(R.id.classic);
+        classic.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, PosleBalaOkno.class);
             startActivity(startActivity);
         });
-        Button poaziya = (Button) findViewById(R.id.poaziya);
-        poaziya.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, PoaziyaChoice.class);
+        Button poem = (Button) findViewById(R.id.poem);
+        poem.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, KnarOkno.class);
             startActivity(startActivity);
         });
     }

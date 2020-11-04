@@ -12,7 +12,7 @@
     <Button
         android:id="@+id/classic"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/poem"
+        app:layout_constraintBottom_toTopOf="@id/poaziya"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="230dp"
@@ -25,14 +25,14 @@
         />
 
     <Button
-        android:id="@+id/poem"
+        android:id="@+id/poaziya"
         android:layout_width="230dp"
         android:layout_height="75dp"
         android:padding="50px"
-        android:text="Поэмы"
+        android:text="Поэзия"
         android:textSize="45px"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@id/adventure"
+        app:layout_constraintBottom_toTopOf="@id/comedy"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/classic"
@@ -40,17 +40,17 @@
         />
 
     <Button
-        android:id="@+id/adventure"
+        android:id="@+id/comedy"
         android:layout_width="230dp"
         android:layout_height="75dp"
         android:padding="50px"
-        android:text="Приключения"
+        android:text="Комедии"
         android:textSize="45px"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@id/poem" />
+        app:layout_constraintTop_toBottomOf="@id/poaziya" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

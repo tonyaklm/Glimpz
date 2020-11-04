@@ -20,10 +20,8 @@
         <activity android:name=".RegistrationActivity"/>
         <activity android:name=".JunrBeginer"/>
         <activity android:name=".ListBookBeginer"/>
+        <activity android:name=".PlenKOkno"/>
         <activity android:name=".MozartOkno"/>
-        <activity android:name=".SkazkaBeginer"/>
-        <activity android:name=".StixBeginer"/>
-        <activity android:name=".AdventureBeginer"/>
         <activity android:name=".ListBookMedium"/>
         <activity android:name=".MediumChoice"/>
         <activity android:name=".UniChoice"/>
@@ -31,25 +29,21 @@
         <activity android:name="JunrUni"/>
         <activity android:name=".ListBookUni"/>
         <activity android:name="NewTest"/>
-        <activity android:name=".DelovayaChoice"/>
         <activity android:name=".TestActivity"/>
         <activity android:name=".TestResult"/>
-        <activity android:name=".PoaziyaChoice"/>
         <activity android:name="SettingsAcc"/>
         <activity android:name=".BaldaOkno"/>
         <activity android:name=".Library"/>
         <activity android:name=".KillmanOkno"/>
         <activity android:name=".KnarOkno"/>
         <activity android:name=".Rules"/>
-        <activity android:name=".AdventureChoice"/>
         <activity android:name=".AccActivity" />
         <activity android:name=".screen.yourtests.YourTests"/>
         <activity android:name=".JunrMedium"/>
         <activity android:name=".PosleBalaOkno"/>
         <activity android:name=".RusalOkno"/>
         <activity android:name=".JukOkno"/>
-        <activity android:name=".ClassicChoice"/>
-        <activity android:name=".PoemChoice"/>
+        <activity android:name=".GoreOkno"/>
     </application>
 
 </manifest>

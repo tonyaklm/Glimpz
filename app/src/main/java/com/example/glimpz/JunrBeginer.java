@@ -14,17 +14,17 @@ public class JunrBeginer extends AppCompatActivity{
 
         Button adventure = (Button) findViewById(R.id.adventure);
         adventure.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, AdventureBeginer.class);
+            Intent startActivity = new Intent(this, JukOkno.class);
             startActivity(startActivity);
         });
         Button skazka = (Button) findViewById(R.id.skazka);
         skazka.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, SkazkaBeginer.class);
+            Intent startActivity = new Intent(this, RusalOkno.class);
             startActivity(startActivity);
         });
         Button stix= (Button) findViewById(R.id.stix);
         stix.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, StixBeginer.class);
+            Intent startActivity = new Intent(this, BaldaOkno.class);
             startActivity(startActivity);
         });
     }

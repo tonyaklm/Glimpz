@@ -49,10 +49,24 @@
             android:text="Составить свой тест"
             android:textSize="45px"
             android:textStyle="bold|italic"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@+id/text_knar" />
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            android:padding="50px"
+            android:text="Меню"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newtest"
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest" />
 
 
 

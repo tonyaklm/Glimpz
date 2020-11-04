@@ -6,20 +6,22 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class KnarOkno extends AppCompatActivity {
+import static com.example.glimpz.R.layout.gore_okno;
+
+public class GoreOkno extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.knar_okno);
+        setContentView(gore_okno);
 
-        Button knar_now = (Button) findViewById(R.id.knar_now);
-        knar_now.setOnClickListener(view -> {
+        Button gore_now = (Button) findViewById(R.id.gore_now);
+        gore_now.setOnClickListener(view -> {
             Intent startActivity = new Intent(this, Library.class);
-            startActivity.putExtra(Library.ARG_BOOK, Book.Knar);
+            startActivity.putExtra(Library.ARG_BOOK, Book.Gore);
             startActivity(startActivity);
         });
         Button newtest = (Button) findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, knar_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, gore_now.getText().toString()));
 
         Button menu = (Button) findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

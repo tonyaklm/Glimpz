@@ -21,6 +21,8 @@ public class AccActivity extends AppCompatActivity {
             Intent startActivity = new Intent(this, YourTests.class);
             startActivity(startActivity);
         });
+        Button done = (Button) findViewById(R.id.done);
+
 
     }
 

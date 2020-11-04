@@ -14,7 +14,7 @@
 
         <Button
             android:id="@+id/mozart_now"
-            android:layout_width="230dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/mozart2"
             android:padding="50px"
@@ -54,6 +54,20 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_mozazt" />
 
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="16dp"
+            android:padding="50px"
+            android:text="Меню"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

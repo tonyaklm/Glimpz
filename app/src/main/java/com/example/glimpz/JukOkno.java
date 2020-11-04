@@ -20,6 +20,12 @@ public class JukOkno extends AppCompatActivity{
         });
         Button newtest = (Button) findViewById(R.id.newtest);
         newtest.setOnClickListener(view -> Rules.start(this, juk_now.getText().toString()));
+
+        Button menu = (Button) findViewById(R.id.menu);
+        menu.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, DashboardActivity.class);
+            startActivity(startActivity);
+        });
     }
 
 }
