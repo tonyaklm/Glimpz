@@ -22,6 +22,22 @@ public class AccActivity extends AppCompatActivity {
             startActivity(startActivity);
         });
         Button done = (Button) findViewById(R.id.done);
+        done.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, DoneBook.class);
+            startActivity(startActivity);
+        });
+        Button liked_book = (Button) findViewById(R.id.liked_book);
+        liked_book.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, LikedBook.class);
+            startActivity(startActivity);
+        });
+        Button my_level = (Button) findViewById(R.id.my_level);
+        my_level.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, MyLevel.class);
+            startActivity(startActivity);
+        });
+
+
 
 
     }

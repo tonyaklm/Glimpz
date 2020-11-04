@@ -26,4 +26,5 @@ public class YourTests extends AppCompatActivity {
         recycler.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
+
 }

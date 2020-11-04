@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/test"
         app:layout_constraintTop_toBottomOf="@+id/done"
-        app:layout_constraintBottom_toTopOf="@+id/current_book"
+        app:layout_constraintBottom_toTopOf="@+id/liked_book"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="230dp"
@@ -36,23 +36,9 @@
 
         />
     <Button
-        android:id="@+id/current_book"
-        app:layout_constraintTop_toBottomOf="@+id/test"
-        app:layout_constraintBottom_toTopOf="@+id/liked_book"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_width="230dp"
-        android:layout_height="75dp"
-        android:textStyle="bold|italic"
-        android:textSize="45px"
-        android:padding="50px"
-        android:text="Текущая книга"
-
-        />
-    <Button
         android:id="@+id/liked_book"
-        app:layout_constraintTop_toBottomOf="@+id/current_book"
-        app:layout_constraintBottom_toTopOf="@+id/My_level"
+        app:layout_constraintTop_toBottomOf="@+id/test"
+        app:layout_constraintBottom_toTopOf="@+id/my_level"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="230dp"
@@ -64,7 +50,7 @@
 
         />
     <Button
-        android:id="@+id/My_level"
+        android:id="@+id/my_level"
         app:layout_constraintTop_toBottomOf="@+id/liked_book"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

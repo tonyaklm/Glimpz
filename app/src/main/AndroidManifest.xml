@@ -24,6 +24,9 @@
         <activity android:name=".MozartOkno"/>
         <activity android:name=".ListBookMedium"/>
         <activity android:name=".MediumChoice"/>
+        <activity android:name=".MyLevel"/>
+        <activity android:name=".DoneBook"/>
+        <activity android:name=".LikedBook"/>
         <activity android:name=".UniChoice"/>
         <activity android:name=".BeginerChoice"/>
         <activity android:name="JunrUni"/>
