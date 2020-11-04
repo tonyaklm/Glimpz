@@ -40,10 +40,19 @@ public class Library extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        handler.postDelayed(() -> recalculatePageReadingTime(false), 50);
+        read();
+    }
 
-        Button nextball = findViewById(R.id.nextball);
-        nextball.setOnClickListener(view -> recalculatePageReadingTime(true));
+    private void read() {
+        boolean isSpeedReading = getIntent().getBooleanExtra(ARG_SPEED_READING, false);
+        Button nextPage = findViewById(R.id.nextball);
+        if (isSpeedReading) {
+            handler.postDelayed(() -> recalculatePageReadingTime(false), 50);
+            nextPage.setOnClickListener(view -> recalculatePageReadingTime(true));
+        } else {
+            handler.postDelayed(() -> bookText.setText(getNextPage()), 50);
+            nextPage.setOnClickListener(view -> bookText.setText(getNextPage()));
+        }
     }
 
     private void recalculatePageReadingTime(boolean forceNextPage) {
@@ -114,8 +123,6 @@ public class Library extends AppCompatActivity {
             case Mozart: return R.raw.mozart;
             case Plenk: return R.raw.plenk;
             case Gore: return R.raw.gore;
-
-
         }
         throw new IllegalArgumentException("No book");
     }
