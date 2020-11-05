@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/killman_now"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/killman1"
+            android:padding="50px"
+            android:text="Убить человека(Джек Лондон)"
+            android:textSize="45px"
+            android:textColor="#333333"
+            android:background="@drawable/back"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.078" />
+
+        <TextView
+            android:id="@+id/text_killman"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Молодая женщина, вернувшись ночью домой, застает в одной из комнат своего богатого дома вооруженного грабителя. Преступник, угрожая оружием, обещает не причинять хозяйке вреда, если она даст ему уйти, ведь он просто пришел взять то, что принадлежит ему. Заинтригованная девушка предлагает мужчине остаться и объяснить свою точку зрения на воровство и справедливость. В ходе дружеской беседы револьвер оказывается в руках жертвы грабежа..."
+            android:textStyle="bold|italic"
+            android:textColor="#333333"
+
+            app:layout_constraintHorizontal_bias="0.737"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/killman_now" />
+
+        <Button
+            android:id="@+id/newtest"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:textColor="#333333"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="Составить свой тест"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_killman" />
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="44dp"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="Меню"
+            android:textColor="#333333"
+            android:textSize="45px"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/like"
+            app:layout_constraintHorizontal_bias="0.584"
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest"
+            app:layout_constraintStart_toStartOf="@+id/like"
+            app:layout_constraintTop_toBottomOf="@id/like"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="В избранное"
+            android:textColor="#333333"
+            android:textSize="45px"
+
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newtest"
+            app:layout_constraintVertical_bias="0.159"
+            tools:layout_editor_absoluteX="90dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/levsha_now"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/levsha"
+            android:padding="50px"
+            android:text="Левша (Н.С.Лесков)"
+            android:textSize="45px"
+            android:textColor="#333333"
+            android:background="@drawable/back"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.078" />
+
+        <TextView
+            android:id="@+id/text_levsha"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="#333333"
+
+            android:textStyle="bold|italic"
+            app:layout_constraintTop_toBottomOf="@id/levsha_now"
+            android:text="История о “Левше” показывает, как сильно отличается мышление русских от мышления англичан, как сильно меняется отношение русских к человеку, о котором ничего не известно достоверно, будь он на словах кем угодно. И много чего другого показывает эта история. Она хоть и пропитана любовью к родной стране и верой в то, что наши люди тоже талантливы, но писатель с иронией говорит о недостатках русского народа, которые способны его погубить. Он говорит о человеке и отношении к нему вообще и о роли отдельной личности в истории государства."/>
+        <Button
+            android:id="@+id/newtest"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:textColor="#333333"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="Составить свой тест"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_levsha" />
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="44dp"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="Меню"
+            android:textColor="#333333"
+            android:textSize="45px"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/like"
+            app:layout_constraintEnd_toEndOf="@+id/like"
+            app:layout_constraintHorizontal_bias="0.584"
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest"
+            app:layout_constraintStart_toStartOf="@+id/like" />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="В избранное"
+            android:textColor="#333333"
+            android:textSize="45px"
+
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newtest"
+            app:layout_constraintVertical_bias="0.159"
+            tools:layout_editor_absoluteX="90dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

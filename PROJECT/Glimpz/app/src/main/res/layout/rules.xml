@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/rules_now"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="                          ПРАВИЛА СОЗДАНИЯ ТЕСТА:\n
+            Тест можно составить из пяти вопросов. На каждый вопрос четыре варианта ответов, первый обязательно должен быть правильным. После создания тест сохранится в окне “Мои тесты”. В любой момент вы можете пройти его, где ответы будут перемешаны.
+"
+            android:textStyle="bold|italic"
+            android:textColor="#333333"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/agree"
+            android:layout_width="230dp"
+            android:layout_height="80dp"
+
+            android:layout_marginTop="308dp"
+            android:padding="50px"
+            android:text="Прочитал правила создания"
+            android:textSize="45px"
+            android:textColor="#333333"
+            android:background="@drawable/back"
+            android:textStyle="bold|italic"
+            app:layout_constraintHorizontal_bias="0.911"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rules_now" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

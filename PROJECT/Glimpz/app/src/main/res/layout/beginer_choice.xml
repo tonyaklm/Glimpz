@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/watch_now"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="\n
+            Хотите ли вы посмотреть список доступных книг для вас? \n
+            Для того, чтобы посмотреть, нажмите книпку “Посмотреть список доступных книг”. \n
+            Для того, чтобы перейти к выбору жанра и книги, нажмите “Далее”.\n"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#333333"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="230dp"
+            android:layout_height="80dp"
+
+            android:layout_marginTop="80dp"
+            android:padding="50px"
+            android:text="Посмотеть доступные книги"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            android:textColor="#333333"
+            android:background="@drawable/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/watch_now" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+
+            android:layout_marginTop="8dp"
+            android:padding="50px"
+            android:text="Далее"
+            android:textSize="45px"
+            android:textStyle="bold|italic"
+            android:textColor="#333333"
+            android:background="@drawable/back"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.607"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
