@@ -19,6 +19,8 @@
             android:drawableTop="@drawable/rusal2"
             android:padding="50px"
             android:text="Русалочка (Г.Х.Андерсен)"
+            android:textColor="#333333"
+            android:background="@drawable/back"
             android:textSize="45px"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -32,6 +34,8 @@
             android:id="@+id/text_rusal"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
+            android:textColor="#333333"
+
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:textStyle="bold|italic"
@@ -41,8 +45,9 @@
         <Button
             android:id="@+id/newtest"
             android:layout_width="230dp"
-            android:layout_height="wrap_content"
-
+            android:layout_height="70dp"
+            android:textColor="#333333"
+            android:background="@drawable/back"
             android:padding="50px"
             android:text="Составить свой тест"
             android:textSize="45px"
@@ -54,19 +59,41 @@
 
         <Button
             android:id="@+id/menu"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="44dp"
+            android:background="@drawable/back"
             android:padding="50px"
             android:text="Меню"
+            android:textColor="#333333"
             android:textSize="45px"
+            android:layout_marginTop="20dp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/like"
+            app:layout_constraintEnd_toEndOf="@+id/like"
+            app:layout_constraintHorizontal_bias="0.584"
             app:layout_constraintLeft_toLeftOf="@id/newtest"
             app:layout_constraintRight_toRightOf="@id/newtest"
-            app:layout_constraintTop_toBottomOf="@id/newtest"
-            app:layout_constraintVertical_bias="0.104" />
+            app:layout_constraintStart_toStartOf="@+id/like" />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="В избранное"
+            android:textColor="#333333"
+            android:textSize="45px"
+
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newtest"
+            app:layout_constraintVertical_bias="0.159"
+            tools:layout_editor_absoluteX="90dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

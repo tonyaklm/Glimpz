@@ -30,6 +30,7 @@ public class TestStore {
     public static void addTest(Test test) {
         ArrayList<Test> tests = getTests(null, false);
         tests.add(test);
+        //tests.remove(test);
         prefs.edit()
                 .putString(TESTS_KEY, toString(tests))
                 .apply();
@@ -43,6 +44,8 @@ public class TestStore {
         } else {
             allTests = fromString(testsText);
         }
+        // return books
+
         if (withDefaults) {
             allTests.addAll(DefaultTests.tests);
         }

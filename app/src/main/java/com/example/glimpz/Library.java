@@ -62,23 +62,27 @@ public class Library extends AppCompatActivity {
     }
 
     private void recalculatePageReadingTime(boolean forceNextPage) {
+        boolean shouldExit = false;
         if (currentPageReadingTime == 0 || forceNextPage) {
-            renderNextPage();
+            shouldExit = renderNextPage();
         } else {
             updateTimer();
         }
-        handler.postDelayed(() -> recalculatePageReadingTime(false), 1000);
+        if (!shouldExit) {
+            handler.postDelayed(() -> recalculatePageReadingTime(false), 1000);
+        }
     }
 
     private int getCurrentPageReadingTime() {
-        return Math.max(15, 32 - currentPage / 10);
+        return Math.max(15, 29 -  currentPage / 10);
     }
 
-    private void renderNextPage() {
+    private boolean renderNextPage() {
         currentPageReadingTime = getCurrentPageReadingTime();
         handler.removeCallbacksAndMessages(null);
-        reloadPage();
+        boolean shouldExit = reloadPage();
         updateTimer();
+        return shouldExit;
     }
 
     private void updateTimer() {
@@ -100,16 +104,19 @@ public class Library extends AppCompatActivity {
         return text;
     }
 
-    private void reloadPage() {
+    private boolean reloadPage() {
         String page = getNextPage();
         if (page.isEmpty()) {
             // Book complete
+            handler.removeCallbacksAndMessages(null);
             updateBookReadingTime();
             YourTests.launch(this, getBook());
+            return true;
         } else {
             bookText.setText(page);
         }
         ++currentPage;
+        return false;
     }
 
     private void updateBookReadingTime() {

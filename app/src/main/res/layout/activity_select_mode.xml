@@ -11,6 +11,7 @@
             android:layout_marginTop="80dp"
             android:gravity="center"
             android:text="Выберите режим чтения"
+        android:textColor="#333333"
             app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -22,6 +23,8 @@
             android:text="Обычный"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/speed"
+            android:background="@drawable/back"
+            android:textColor="#333333"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,6 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:text="На скорость"
+            android:background="@drawable/back"
+            android:textColor="#333333"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/plain"

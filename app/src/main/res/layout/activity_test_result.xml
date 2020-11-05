@@ -39,6 +39,8 @@
         android:text="Меню"
         android:textSize="45px"
         android:textStyle="bold|italic"
+        android:background="@drawable/back"
+        android:textColor="#333333"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteX="245dp" />

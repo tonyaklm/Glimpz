@@ -16,10 +16,12 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textColor="#333333"
+
             android:text="\n
-            Жанр Классические произведения: “Кавказский пленник” Л.Н. Толстой\n
-            Жанр Поэзия : “ Моцарт и Сальери”  А.С.Пушкин\n
-            Жанр Сказ: “Левша” Н.С.Лесков "
+            Жанр Классические произведения:\n “Кавказский пленник” Л.Н. Толстой\n
+            Жанр Поэзия :\n “ Моцарт и Сальери”  А.С.Пушкин\n
+            Жанр Сказ: \n“Левша” Н.С.Лесков "
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.491"
@@ -31,8 +33,9 @@
         <Button
             android:id="@+id/next"
             android:layout_width="230dp"
-            android:layout_height="wrap_content"
-
+            android:layout_height="80dp"
+            android:textColor="#333333"
+            android:background="@drawable/back"
             android:layout_marginTop="80dp"
             android:padding="50px"
             android:text="Перейти к выбору жанра и книги"

@@ -39,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Зарегистрироваться"
+
         app:layout_constraintTop_toBottomOf="@id/emailInput1"
         app:layout_constraintBottom_toBottomOf="parent"
         />

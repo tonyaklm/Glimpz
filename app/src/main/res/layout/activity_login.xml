@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Войти"
+        android:textColor="#333333"
         app:layout_constraintBottom_toTopOf="@id/forgot_password"
         app:layout_constraintTop_toBottomOf="@id/password" />
 
@@ -17,6 +18,7 @@
         android:id="@+id/forgot_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#333333"
         android:text="Зарегестрироваться"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/enter" />
@@ -26,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Введите логин"
+
         app:layout_constraintBottom_toTopOf="@id/password"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
@@ -35,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Введите пароль"
+
         app:layout_constraintBottom_toTopOf="@id/enter"
         app:layout_constraintTop_toBottomOf="@id/login" />
 

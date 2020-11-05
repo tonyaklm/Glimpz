@@ -20,6 +20,9 @@
             android:padding="50px"
             android:text="Сказка о попе и о работнике его Балде (А.С.Пушкин)"
             android:textSize="45px"
+
+            android:textColor="#333333"
+            android:background="@drawable/back"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -34,7 +37,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-
+            android:textColor="#333333"
             android:textStyle="bold|italic"
             app:layout_constraintTop_toBottomOf="@id/balda_now"
             android:text=" Сказка о скупом попе и находчивом работнике Балде. Нанялся как-то Балда на службу за три щелчка по лбу попу. Когда близилось время расплаты, поп решил дать Балде невыполнимое задание, чтобы избавиться от него. Но Балда справился со всем, обхитрил самих чертей и наказал попа…"/>
@@ -42,10 +45,12 @@
         <Button
             android:id="@+id/newtest"
             android:layout_width="230dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
 
+            android:background="@drawable/back"
             android:padding="50px"
             android:text="Составить свой тест"
+            android:textColor="#333333"
             android:textSize="45px"
             android:textStyle="bold|italic"
             app:layout_constraintHorizontal_bias="0.497"
@@ -55,19 +60,41 @@
 
         <Button
             android:id="@+id/menu"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="44dp"
+            android:background="@drawable/back"
             android:padding="50px"
             android:text="Меню"
+            android:textColor="#333333"
             android:textSize="45px"
+            android:layout_marginTop="20dp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/like"
+            app:layout_constraintEnd_toEndOf="@+id/like"
+            app:layout_constraintHorizontal_bias="0.584"
             app:layout_constraintLeft_toLeftOf="@id/newtest"
             app:layout_constraintRight_toRightOf="@id/newtest"
-            app:layout_constraintTop_toBottomOf="@id/newtest"
-            app:layout_constraintVertical_bias="0.162" />
+            app:layout_constraintStart_toStartOf="@+id/like" />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:background="@drawable/back"
+            android:padding="50px"
+            android:text="В избранное"
+            android:textColor="#333333"
+            android:textSize="45px"
+
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newtest"
+            app:layout_constraintVertical_bias="0.159"
+            tools:layout_editor_absoluteX="90dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

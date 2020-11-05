@@ -12,6 +12,8 @@
         android:layout_height="50dp"
         android:text="Далее"
         android:textStyle="bold|italic"
+        android:textColor="#333333"
+        android:background="@drawable/back"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +32,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
+        android:textColor="#333333"
+
         android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -42,7 +42,7 @@ public class YourTests extends AppCompatActivity {
     }
 
     private Book getBook() {
-        return (Book) getIntent().getSerializableExtra(ARG_BOOK);
+       return (Book) getIntent().getSerializableExtra(ARG_BOOK);
     }
 
     public static void launch(Context context, @Nullable Book book) {

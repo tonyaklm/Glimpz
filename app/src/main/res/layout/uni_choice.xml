@@ -18,6 +18,8 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textColor="#333333"
+
             android:text="\n
             Хотите ли вы посмотреть список доступных книг для вас? \n
             Для того, чтобы посмотреть, нажмите книпку “Посмотреть список доступных книг”. \n
@@ -33,8 +35,9 @@
         <Button
             android:id="@+id/yes"
             android:layout_width="230dp"
-            android:layout_height="wrap_content"
-
+            android:layout_height="80dp"
+            android:textColor="#333333"
+            android:background="@drawable/back"
             android:layout_marginTop="80dp"
             android:padding="50px"
             android:text="Посмотеть доступные книги"
@@ -49,11 +52,13 @@
 
         <Button
             android:id="@+id/next"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
             android:layout_marginTop="8dp"
             android:padding="50px"
             android:text="Далее"
+            android:textColor="#333333"
+            android:background="@drawable/back"
             android:textSize="45px"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"

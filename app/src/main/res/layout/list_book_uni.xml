@@ -17,10 +17,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="\n
-            Жанр Классические произведения: “После бала” Л.Н. Толстой\n
-            Жанр Поэмы : ”Кому на Руси жить хорошо” (Н.А.Некрасов) \n
-            Жанр Приключения: “Убить человека” (Джек Лондон)"
+            Жанр Классические произведения:\n “После бала” Л.Н. Толстой\n
+            Жанр Поэмы :\n ”Кому на Руси жить хорошо” (Н.А.Некрасов) \n
+            Жанр Приключения:\n “Убить человека” (Джек Лондон)"
         android:textStyle="bold|italic"
+        android:textColor="#333333"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -31,8 +33,9 @@
     <Button
         android:id="@+id/next"
         android:layout_width="230dp"
-        android:layout_height="wrap_content"
-
+        android:layout_height="80dp"
+        android:textColor="#333333"
+        android:background="@drawable/back"
         android:layout_marginTop="80dp"
         android:padding="50px"
         android:text="Перейти к выбору жанра и книги"
