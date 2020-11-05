@@ -2,7 +2,9 @@ package com.example.glimpz.data;
 
 import com.example.glimpz.Book;
 
-public class BookResult {
+import java.io.Serializable;
+
+public class BookResult implements Serializable {
 
     private final Book book;
     private final double avgPageTime;

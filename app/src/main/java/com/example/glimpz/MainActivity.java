@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.glimpz.data.Results;
 import com.example.glimpz.data.TestStore;
 import com.example.glimpz.data.Users;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Users.init(this);
         TestStore.init(this);
+        Results.init(this);
         setContentView(R.layout.activity_login);
 
         TextView loginView = findViewById(R.id.login);

@@ -20,12 +20,8 @@ import java.util.Arrays;
 public class TestStore {
 
     private static final String TESTS_KEY = "Key.Tests";
-    private static final ArrayList<Test> EMPTY = new ArrayList<Test>();
+    private static final ArrayList<Test> EMPTY = new ArrayList<>();
     private static SharedPreferences prefs;
-
-    static {
-        Log.e("Tests", "Here");
-    }
 
     public static void init(Context context) {
         prefs = context.getSharedPreferences(Users.getCurrentUserLogin(), Context.MODE_PRIVATE);
@@ -40,9 +36,6 @@ public class TestStore {
     }
 
     public static ArrayList<Test> getTests(@Nullable Book book) {
-        if (prefs == null) {
-            Log.e("Tests", "Null prefs");
-        }
         String testsText = prefs.getString(TESTS_KEY, null);
         ArrayList<Test> allTests;
         if (testsText == null) {
@@ -61,26 +54,10 @@ public class TestStore {
     }
 
     private static ArrayList<Test> fromString(String text) {
-        try {
-            byte[] data = Base64.decode(text, Base64.DEFAULT);
-            return (ArrayList<Test>) (new ObjectInputStream(new ByteArrayInputStream(data))).readObject();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return EMPTY;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return EMPTY;
-        }
+        return (ArrayList<Test>) ObjectDecoder.fromString(text, EMPTY);
     }
 
     private static String toString(ArrayList<Test> tests) {
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        try {
-            (new ObjectOutputStream(stream)).writeObject(tests);
-            return Base64.encodeToString(stream.toByteArray(), Base64.DEFAULT);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        return ObjectDecoder.toString(tests);
     }
 }
