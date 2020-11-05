@@ -16,7 +16,7 @@ public class KillmanOkno extends AppCompatActivity {
         Button killman_now = findViewById(R.id.killman_now);
         killman_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Killman));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, killman_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Killman, killman_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

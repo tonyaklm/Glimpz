@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class NewTest extends AppCompatActivity {
 
     private static final String ARG_BOOK_TITLE = "Arg.NewTest";
+    private static final String ARG_BOOK = "Arg.Book";
     private static Test test;
 
     @Override
@@ -27,9 +28,9 @@ public class NewTest extends AppCompatActivity {
         setContentView(R.layout.new_test);
         String bookTitle = getIntent().getStringExtra(ARG_BOOK_TITLE);
         if (bookTitle != null) {
-            test = new Test(bookTitle);
+            test = new Test(getBook(), bookTitle);
         }
-        Button newpage = (Button) findViewById(R.id.newpage);
+        Button newpage = findViewById(R.id.newpage);
         if (test.getQuestionCount() == 4) {
             newpage.setVisibility(View.GONE);
         }
@@ -38,14 +39,14 @@ public class NewTest extends AppCompatActivity {
             Intent startActivity = new Intent(this, NewTest.class);
             startActivity(startActivity);
         });
-        Button finishbutton = (Button) findViewById(R.id.finishbutton);
+        Button finishbutton = findViewById(R.id.finishbutton);
         if (test.getQuestionCount() != 4) {
             finishbutton.setVisibility(View.GONE);
         }
         finishbutton.setOnClickListener(view -> {
             addQuestion();
             TestStore.addTest(test);
-            test = new Test(bookTitle);
+            test = new Test(getBook(), bookTitle);
             Intent startActivity = new Intent(this, YourTests.class);
             startActivity(startActivity);
         });
@@ -69,9 +70,14 @@ public class NewTest extends AppCompatActivity {
         test.addQuestion(question);
     }
 
-    public static void start(Activity activity, String bookTitle) {
+    private Book getBook() {
+        return (Book) getIntent().getSerializableExtra(ARG_BOOK);
+    }
+
+    public static void start(Activity activity, Book book, String bookTitle) {
         Intent intent = new Intent(activity, NewTest.class);
         intent.putExtra(ARG_BOOK_TITLE, bookTitle);
+        intent.putExtra(ARG_BOOK, book);
         activity.startActivity(intent);
     }
 }

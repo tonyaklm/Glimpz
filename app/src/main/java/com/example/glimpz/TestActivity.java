@@ -30,7 +30,7 @@ public class TestActivity extends AppCompatActivity {
 
     private void drawCurrentQuestion() {
         Test test = (Test) getIntent().getSerializableExtra(ARG_TEST);
-        if (currentQuestionNumber == test.getQuestionCount()) {
+        if (currentQuestionNumber >= test.getQuestionCount()) {
             TestResult.launch(this, correctAnswers, test.getQuestionCount());
             return;
         }
@@ -48,31 +48,31 @@ public class TestActivity extends AppCompatActivity {
         option4.setText(answers.get(3));
         option1.setOnClickListener(view -> {
             ++currentQuestionNumber;
-            drawCurrentQuestion();
             if (question.getCorrectAnswerIndex() == 0) {
                 ++correctAnswers;
             }
+            drawCurrentQuestion();
         });
         option2.setOnClickListener(view -> {
             ++currentQuestionNumber;
-            drawCurrentQuestion();
             if (question.getCorrectAnswerIndex() == 1) {
                 ++correctAnswers;
             }
+            drawCurrentQuestion();
         });
         option3.setOnClickListener(view -> {
             ++currentQuestionNumber;
-            drawCurrentQuestion();
             if (question.getCorrectAnswerIndex() == 2) {
                 ++correctAnswers;
             }
+            drawCurrentQuestion();
         });
         option4.setOnClickListener(view -> {
             ++currentQuestionNumber;
-            drawCurrentQuestion();
             if (question.getCorrectAnswerIndex() == 3) {
                 ++correctAnswers;
             }
+            drawCurrentQuestion();
         });
     }
 

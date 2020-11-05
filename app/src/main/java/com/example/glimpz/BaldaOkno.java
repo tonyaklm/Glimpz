@@ -15,7 +15,7 @@ public class BaldaOkno extends AppCompatActivity {
         Button balda_now = findViewById(R.id.balda_now);
         balda_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Balda));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, balda_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Balda, balda_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

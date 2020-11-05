@@ -16,7 +16,7 @@ public class RusalOkno extends AppCompatActivity{
         Button rusal_now = findViewById(R.id.rusal_now);
         rusal_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Rusal));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, rusal_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Rusal, rusal_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

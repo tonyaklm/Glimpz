@@ -17,7 +17,7 @@ public class GoreOkno extends AppCompatActivity{
         Button gore_now = findViewById(R.id.gore_now);
         gore_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Gore));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, gore_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Gore, gore_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

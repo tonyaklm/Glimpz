@@ -2,24 +2,25 @@ package com.example.glimpz.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Question implements Serializable {
 
-    private String text;
-    private String answer;
-    private ArrayList<String> wrongAnswers;
-    private ArrayList<String> shuffledAnswers;
-    private int correctAnswerIndex;
+    private final String text;
+    private final String answer;
+    private final ArrayList<String> wrongAnswers;
+    private final ArrayList<String> shuffledAnswers;
+    private final int correctAnswerIndex;
 
     public Question(
             String text,
             String answer,
-            ArrayList<String> wrongAnswers
+            List<String> wrongAnswers
     ) {
         this.text = text;
         this.answer = answer;
-        this.wrongAnswers = wrongAnswers;
+        this.wrongAnswers = new ArrayList<>(wrongAnswers);
         correctAnswerIndex = new Random().nextInt(4) % 4;
         ArrayList<String> answers = new ArrayList<>(this.wrongAnswers);
         answers.add(correctAnswerIndex, answer);

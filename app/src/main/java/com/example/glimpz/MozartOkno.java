@@ -15,7 +15,7 @@ public class MozartOkno extends AppCompatActivity {
         Button mozart_now = findViewById(R.id.mozart_now);
         mozart_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Mozart));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, mozart_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Mozart, mozart_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

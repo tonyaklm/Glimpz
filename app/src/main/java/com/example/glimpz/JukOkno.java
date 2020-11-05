@@ -15,7 +15,7 @@ public class JukOkno extends AppCompatActivity {
         Button juk_now = findViewById(R.id.juk_now);
         juk_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Juk));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, juk_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Juk, juk_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

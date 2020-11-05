@@ -13,6 +13,6 @@ public class PosleBalaOkno extends AppCompatActivity {
         Button bal_now = findViewById(R.id.bal_now);
         bal_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Ball));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, bal_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Ball, bal_now.getText().toString()));
     }
 }

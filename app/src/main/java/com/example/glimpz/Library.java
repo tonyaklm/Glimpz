@@ -15,6 +15,8 @@ import java.io.InputStreamReader;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.glimpz.screen.yourtests.YourTests;
+
 
 public class Library extends AppCompatActivity {
 
@@ -50,8 +52,8 @@ public class Library extends AppCompatActivity {
             handler.postDelayed(() -> recalculatePageReadingTime(false), 50);
             nextPage.setOnClickListener(view -> recalculatePageReadingTime(true));
         } else {
-            handler.postDelayed(() -> bookText.setText(getNextPage()), 50);
-            nextPage.setOnClickListener(view -> bookText.setText(getNextPage()));
+            handler.postDelayed(() -> reloadPage(), 50);
+            nextPage.setOnClickListener(view -> reloadPage());
         }
     }
 
@@ -71,7 +73,7 @@ public class Library extends AppCompatActivity {
     private void renderNextPage() {
         currentPageReadingTime = getCurrentPageReadingTime();
         handler.removeCallbacksAndMessages(null);
-        bookText.setText(getNextPage());
+        reloadPage();
         ++currentPage;
         updateTimer();
     }
@@ -95,8 +97,16 @@ public class Library extends AppCompatActivity {
         return text;
     }
 
+    private void reloadPage() {
+        String page = getNextPage();
+        if (page.isEmpty()) {
+            YourTests.launch(this, getBook());
+        } else {
+            bookText.setText(page);
+        }
+    }
 
-    String getNextPage() {
+    private String getNextPage() {
         String page = "";
         int i = 0;
         while (i < 25) {
@@ -112,8 +122,7 @@ public class Library extends AppCompatActivity {
     }
 
     int getTextFileId() {
-        Book book = (Book) getIntent().getSerializableExtra(ARG_BOOK);
-        switch (book) {
+        switch (getBook()) {
             case Ball: return R.raw.book_ball;
             case Killman: return R.raw.killman_book;
             case Knar: return R.raw.knar_book;
@@ -125,6 +134,10 @@ public class Library extends AppCompatActivity {
             case Gore: return R.raw.gore;
         }
         throw new IllegalArgumentException("No book");
+    }
+
+    private Book getBook() {
+        return (Book) getIntent().getSerializableExtra(ARG_BOOK);
     }
 
     public static void launch(Context context, boolean speedReading, Book book) {

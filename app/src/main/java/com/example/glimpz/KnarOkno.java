@@ -15,7 +15,7 @@ public class KnarOkno extends AppCompatActivity {
         Button knar_now = findViewById(R.id.knar_now);
         knar_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Knar));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, knar_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Killman, knar_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

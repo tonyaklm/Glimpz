@@ -15,7 +15,7 @@ public class PlenKOkno extends AppCompatActivity {
         Button plenk_now = findViewById(R.id.plenk_now);
         plenk_now.setOnClickListener(view -> SelectModeActivity.launch(this,  Book.Plenk));
         Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, plenk_now.getText().toString()));
+        newtest.setOnClickListener(view -> Rules.start(this, Book.Plenk, plenk_now.getText().toString()));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {
