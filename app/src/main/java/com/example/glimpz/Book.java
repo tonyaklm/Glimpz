@@ -9,5 +9,5 @@ public enum Book {
     Balda,
     Mozart,
     Plenk,
-    Gore,
+    Levsha,
 }

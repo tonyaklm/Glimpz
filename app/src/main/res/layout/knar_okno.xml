@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/knar"
             android:padding="50px"
-            android:text="Кому на Руси жить хорошо (Николай Некрасов)"
+            android:text="Кому на Руси жить хорошо (Н.А.Некрасов)"
             android:textSize="45px"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"

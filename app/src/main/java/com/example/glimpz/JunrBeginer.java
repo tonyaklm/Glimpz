@@ -27,5 +27,10 @@ public class JunrBeginer extends AppCompatActivity{
             Intent startActivity = new Intent(this, BaldaOkno.class);
             startActivity(startActivity);
         });
+        Button menu = (Button) findViewById(R.id.menu);
+        menu.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, SettingsAcc.class);
+            startActivity(startActivity);
+        });
     }
 }

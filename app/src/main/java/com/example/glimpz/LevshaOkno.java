@@ -6,18 +6,16 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.example.glimpz.R.layout.gore_okno;
+import static com.example.glimpz.R.layout.levsha_okno;
 
-public class GoreOkno extends AppCompatActivity{
+public class LevshaOkno extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(gore_okno);
+        setContentView(levsha_okno);
 
-        Button gore_now = findViewById(R.id.gore_now);
-        gore_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Gore));
-        Button newtest = findViewById(R.id.newtest);
-        newtest.setOnClickListener(view -> Rules.start(this, Book.Gore, gore_now.getText().toString()));
+        Button levsha_now = (Button) findViewById(R.id.levsha_now);
+        levsha_now.setOnClickListener(view -> SelectModeActivity.launch(this, Book.Levsha));
 
         Button menu = findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

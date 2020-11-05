@@ -3,8 +3,10 @@ package com.example.glimpz.screen.yourtests;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.example.glimpz.Book;
+import com.example.glimpz.DashboardActivity;
 import com.example.glimpz.R;
 import com.example.glimpz.TestActivity;
 import com.example.glimpz.data.TestStore;
@@ -31,6 +33,12 @@ public class YourTests extends AppCompatActivity {
         });
         recycler.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
+        Button menu = (Button) findViewById(R.id.menu);
+        menu.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, DashboardActivity.class);
+            startActivity(startActivity);
+        });
     }
 
     private Book getBook() {

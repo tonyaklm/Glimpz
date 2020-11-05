@@ -67,7 +67,7 @@ public class Library extends AppCompatActivity {
     }
 
     private int getCurrentPageReadingTime() {
-        return Math.max(15, 27 - currentPage / 10);
+        return Math.max(15, 32 - currentPage / 10);
     }
 
     private void renderNextPage() {
@@ -131,7 +131,7 @@ public class Library extends AppCompatActivity {
             case Balda: return R.raw.balda;
             case Mozart: return R.raw.mozart;
             case Plenk: return R.raw.plenk;
-            case Gore: return R.raw.gore;
+            case Levsha: return R.raw.levsha;
         }
         throw new IllegalArgumentException("No book");
     }

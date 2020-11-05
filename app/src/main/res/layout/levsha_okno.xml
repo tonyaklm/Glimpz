@@ -13,12 +13,12 @@
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/gore_now"
+            android:id="@+id/levsha_now"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/gore"
+            android:drawableTop="@drawable/levsha"
             android:padding="50px"
-            android:text="Горе от ума (А.С.Грибоедов)"
+            android:text="Левша (Н.С.Лесков)"
             android:textSize="45px"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -29,15 +29,15 @@
             app:layout_constraintVertical_bias="0.078" />
 
         <TextView
-            android:id="@+id/text_gore"
+            android:id="@+id/text_levsha"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
 
             android:textStyle="bold|italic"
-            app:layout_constraintTop_toBottomOf="@id/gore_now"
-            android:text=":"/>
+            app:layout_constraintTop_toBottomOf="@id/levsha_now"
+            android:text="История о “Левше” показывает, как сильно отличается мышление русских от мышления англичан, как сильно меняется отношение русских к человеку, о котором ничего не известно достоверно, будь он на словах кем угодно. И много чего другого показывает эта история. Она хоть и пропитана любовью к родной стране и верой в то, что наши люди тоже талантливы, но писатель с иронией говорит о недостатках русского народа, которые способны его погубить. Он говорит о человеке и отношении к нему вообще и о роли отдельной личности в истории государства."/>
         <Button
             android:id="@+id/newtest"
             android:layout_width="230dp"
@@ -50,22 +50,23 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_gore" />
+            app:layout_constraintTop_toBottomOf="@+id/text_levsha" />
+
         <Button
             android:id="@+id/menu"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginBottom="44dp"
+            android:layout_marginTop="4dp"
             android:padding="50px"
             android:text="Меню"
             android:textSize="45px"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.938"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
-
+            app:layout_constraintLeft_toLeftOf="@id/newtest"
+            app:layout_constraintRight_toRightOf="@id/newtest"
+            app:layout_constraintTop_toBottomOf="@id/newtest"
+            app:layout_constraintVertical_bias="0.21" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

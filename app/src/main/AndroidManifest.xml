@@ -46,8 +46,9 @@
         <activity android:name=".PosleBalaOkno"/>
         <activity android:name=".RusalOkno"/>
         <activity android:name=".JukOkno"/>
-        <activity android:name=".GoreOkno"/>
+        <activity android:name=".LevshaOkno"/>
         <activity android:name=".SelectModeActivity" />
+
     </application>
 
 </manifest>

@@ -17,9 +17,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="\n
-            Жанр Классические произведения: “После бала” Л.Н. Толстой\n
-            Жанр Поэмы : “ Кому на Руси жить хорошо”  Н. А. Некрасов\n
-            Жанр Приключения: “Убить человека” Джек Лондон"
+            Жанр Классические произведения: “Кавказский пленник” Л.Н. Толстой\n
+            Жанр Поэзия : “ Моцарт и Сальери”  А.С.Пушкин\n
+            Жанр Сказ: “Левша” Н.С.Лесков "
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.491"
