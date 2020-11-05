@@ -44,10 +44,12 @@ public class TestStore {
             Log.e("Tests", "Null prefs");
         }
         String testsText = prefs.getString(TESTS_KEY, null);
+        ArrayList<Test> allTests;
         if (testsText == null) {
-            return new ArrayList<>(DefaultTests.tests);
+            allTests = new ArrayList<>(EMPTY);
+        } else {
+            allTests = fromString(testsText);
         }
-        ArrayList<Test> allTests = fromString(testsText);
         allTests.addAll(DefaultTests.tests);
         ArrayList<Test> filteredTests = new ArrayList<>();
         for (Test test : allTests) {

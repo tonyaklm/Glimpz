@@ -36,10 +36,5 @@ public class AccActivity extends AppCompatActivity {
             Intent startActivity = new Intent(this, MyLevel.class);
             startActivity(startActivity);
         });
-
-
-
-
     }
-
 }

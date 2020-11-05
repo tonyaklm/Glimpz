@@ -12,9 +12,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Date;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.glimpz.data.Results;
 import com.example.glimpz.screen.yourtests.YourTests;
 
 
@@ -29,12 +31,14 @@ public class Library extends AppCompatActivity {
     private TextView timeLeft;
     private int currentPageReadingTime = 0;
     private int currentPage = 0;
+    private Date startTime = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acitivity_library);
+        startTime = new Date();
         bookText = findViewById(R.id.bookText);
         timeLeft = findViewById(R.id.timeLeft);
         try {
@@ -74,7 +78,6 @@ public class Library extends AppCompatActivity {
         currentPageReadingTime = getCurrentPageReadingTime();
         handler.removeCallbacksAndMessages(null);
         reloadPage();
-        ++currentPage;
         updateTimer();
     }
 
@@ -100,10 +103,19 @@ public class Library extends AppCompatActivity {
     private void reloadPage() {
         String page = getNextPage();
         if (page.isEmpty()) {
+            // Book complete
+            updateBookReadingTime();
             YourTests.launch(this, getBook());
         } else {
             bookText.setText(page);
         }
+        ++currentPage;
+    }
+
+    private void updateBookReadingTime() {
+        long seconds = (new Date().getTime() - startTime.getTime()) / 1000;
+        double avgTime = ((double) seconds) / currentPage;
+        Results.updateBookSpeed(getBook(), avgTime);
     }
 
     private String getNextPage() {
