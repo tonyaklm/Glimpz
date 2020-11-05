@@ -16,7 +16,7 @@ public class Liked {
     private static SharedPreferences prefs;
 
     public static void init(Context context) {
-        prefs = context.getSharedPreferences("liked", Context.MODE_PRIVATE);
+        prefs = context.getSharedPreferences("liked" + Users.getCurrentUserLogin(), Context.MODE_PRIVATE);
     }
 
     public static void likeBook(Book book) {

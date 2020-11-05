@@ -50,7 +50,7 @@
         android:textColor="#333333"
         android:background="@drawable/back"
         android:padding="50px"
-        android:text="Учашийся старшей школы или ученик колледжа"
+        android:text="Учашийся старшей школы "
         android:textSize="45px"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
