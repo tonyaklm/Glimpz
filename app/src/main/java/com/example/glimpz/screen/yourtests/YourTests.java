@@ -28,7 +28,7 @@ public class YourTests extends AppCompatActivity {
         setContentView(R.layout.your_tests);
         recycler = findViewById(R.id.recycler);
         recycler.setLayoutManager(new LinearLayoutManager(this));
-        YourTestsAdapter adapter = new YourTestsAdapter(TestStore.getTests(getBook()), test -> {
+        YourTestsAdapter adapter = new YourTestsAdapter(TestStore.getTests(getBook(), getBook() != null), test -> {
             TestActivity.launch(this, test);
         });
         recycler.setAdapter(adapter);

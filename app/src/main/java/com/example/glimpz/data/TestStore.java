@@ -28,14 +28,14 @@ public class TestStore {
     }
 
     public static void addTest(Test test) {
-        ArrayList<Test> tests = getTests(null);
+        ArrayList<Test> tests = getTests(null, false);
         tests.add(test);
         prefs.edit()
                 .putString(TESTS_KEY, toString(tests))
                 .apply();
     }
 
-    public static ArrayList<Test> getTests(@Nullable Book book) {
+    public static ArrayList<Test> getTests(@Nullable Book book, boolean withDefaults) {
         String testsText = prefs.getString(TESTS_KEY, null);
         ArrayList<Test> allTests;
         if (testsText == null) {
@@ -43,7 +43,9 @@ public class TestStore {
         } else {
             allTests = fromString(testsText);
         }
-        allTests.addAll(DefaultTests.tests);
+        if (withDefaults) {
+            allTests.addAll(DefaultTests.tests);
+        }
         ArrayList<Test> filteredTests = new ArrayList<>();
         for (Test test : allTests) {
             if (book == null || test.getBook() == book) {
