@@ -3,6 +3,7 @@ package com.example.glimpz;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -21,6 +22,12 @@ public class TestResult extends AppCompatActivity {
         int correctAnswers = getIntent().getIntExtra(ARG_CORRECT_ANSWERS, 0);
         int totalQuestions = getIntent().getIntExtra(ARG_TOTAL_QUESTIONS, 0);
         result.setText("Правильных ответов: " + correctAnswers + "/" + totalQuestions);
+
+        Button menu = findViewById(R.id.menu);
+        menu.setOnClickListener(view -> {
+            Intent startActivity = new Intent(this, DashboardActivity.class);
+            startActivity(startActivity);
+        });
     }
 
     public static void launch(Context context, int correctAnswers, int totalQuestions) {
