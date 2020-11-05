@@ -14,18 +14,15 @@ public class JunrMedium extends AppCompatActivity {
 
         Button skaz = (Button) findViewById(R.id.skaz);
         skaz.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, LevshaOkno.class);
-            startActivity(startActivity);
+            LevshaOkno.launch(this);
         });
         Button classic = (Button) findViewById(R.id.classic);
         classic.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, PlenKOkno.class);
-            startActivity(startActivity);
+            PlenKOkno.launch(this);
         });
         Button poaziya = (Button) findViewById(R.id.poaziya);
         poaziya.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, MozartOkno.class);
-            startActivity(startActivity);
+            MozartOkno.launch(this);
         });
         Button menu = (Button) findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

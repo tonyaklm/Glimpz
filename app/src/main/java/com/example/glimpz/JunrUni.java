@@ -14,18 +14,15 @@ public class JunrUni extends AppCompatActivity {
 
         Button adventure = (Button) findViewById(R.id.adventure);
         adventure.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, KillmanOkno.class);
-            startActivity(startActivity);
+            KillmanOkno.launch(this);
         });
         Button classic = (Button) findViewById(R.id.classic);
         classic.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, PosleBalaOkno.class);
-            startActivity(startActivity);
+            PosleBalaOkno.launch(this);
         });
         Button poem = (Button) findViewById(R.id.poem);
         poem.setOnClickListener(view -> {
-            Intent startActivity = new Intent(this, KnarOkno.class);
-            startActivity(startActivity);
+            KnarOkno.launch(this);
         });
         Button menu = (Button) findViewById(R.id.menu);
         menu.setOnClickListener(view -> {

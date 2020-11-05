@@ -1,12 +1,15 @@
 package com.example.glimpz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class RusalOkno extends AppCompatActivity{
+import com.example.glimpz.data.Liked;
+
+public class RusalOkno extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +26,12 @@ public class RusalOkno extends AppCompatActivity{
             Intent startActivity = new Intent(this, DashboardActivity.class);
             startActivity(startActivity);
         });
+
+        findViewById(R.id.like).setOnClickListener(view -> Liked.likeBook(Book.Rusal));
+    }
+
+    public static void launch(Context context) {
+        Intent startActivity = new Intent(context, RusalOkno.class);
+        context.startActivity(startActivity);
     }
 }

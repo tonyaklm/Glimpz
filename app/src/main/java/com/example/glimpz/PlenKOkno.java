@@ -1,10 +1,13 @@
 package com.example.glimpz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.glimpz.data.Liked;
 
 public class PlenKOkno extends AppCompatActivity {
     @Override
@@ -22,5 +25,12 @@ public class PlenKOkno extends AppCompatActivity {
             Intent startActivity = new Intent(this, DashboardActivity.class);
             startActivity(startActivity);
         });
+
+        findViewById(R.id.like).setOnClickListener(view -> Liked.likeBook(Book.Plenk));
+    }
+
+    public static void launch(Context context) {
+        Intent startActivity = new Intent(context, PlenKOkno.class);
+        context.startActivity(startActivity);
     }
 }

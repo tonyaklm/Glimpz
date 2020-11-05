@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.glimpz.data.BookResult;
+import com.example.glimpz.data.Books;
 
 import java.util.List;
 
@@ -56,7 +57,7 @@ class MyLevelViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setTitle(Book book) {
-        this.title.setText(getTitle(book));
+        this.title.setText(Books.getTitle(book));
     }
 
     public void setAvgSpeed(double avgSpeed) {
@@ -76,29 +77,5 @@ class MyLevelViewHolder extends RecyclerView.ViewHolder {
         } else {
             this.testResult.setVisibility(View.GONE);
         }
-    }
-
-    private String getTitle(Book book) {
-        switch (book) {
-            case Ball:
-                return "После Бала";
-            case Killman:
-                return "Убить человека";
-            case Knar:
-                return "Кому на Руси жить хорошо";
-            case Rusal:
-                return "Русалочка";
-            case Juk:
-                return "Чук и Гек";
-            case Balda:
-                return "Сказка о попе и о работнике его Балде";
-            case Mozart:
-                return "Моцарт и Сальери";
-            case Plenk:
-                return "Кавказский пленник";
-            case Levsha:
-                return "Левша";
-        }
-        throw new RuntimeException("no book title");
     }
 }
